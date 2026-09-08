@@ -2,10 +2,10 @@
 
 #include <mutex>
 
-typedef struct __counter_t {
+struct counter_t {
     int value = 0;
     std::mutex lock;
-} counter_t;
+};
 
 void init (counter_t *c) { //unecessary, kept for resetting idk
     c->value = 0;
