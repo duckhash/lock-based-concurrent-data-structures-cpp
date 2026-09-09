@@ -12,7 +12,7 @@
 #endif
 
 struct counter_t {
-    int        global;
+    int        global = 0;
     std::mutex glock; // lol, from global + clock = glock
     int        local[NUMCPUS];
     std::mutex llock[NUMCPUS];
@@ -21,7 +21,6 @@ struct counter_t {
 
 void init(counter_t *c, int threshold) {
     c->threshold = threshold;
-    c->global = 0;
     int i;
     for (i = 0; i < NUMCPUS; ++i) {
         c->local[i] = 0;
