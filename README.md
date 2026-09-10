@@ -1,12 +1,7 @@
 # lock-based-concurrent-data-structures-cpp
-OSTEP Book Chapter 29 Examples Translated from C to C++
+OSTEP Book Chapter 29 and 30 practice in C++
 
-POSIX is great and all, but windows do <i>not</i> have very good support for it,
-so the point is to use std::thread over pthreads so these work on
-windows.
-
-Also a good opportunity for me to use this as an excuse to write
-some code by hand, yay.
+An excuse for me to write some C++ by hand while still going through OSTEP
 
 And I know, I know, <i>manually calling lock() and unlock() is not modern c++</i>!
 You're right! It's not good modern practice! I'm still learning how to write
